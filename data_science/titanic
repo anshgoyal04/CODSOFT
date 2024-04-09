@@ -1,0 +1,32 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+
+# Load the Titanic dataset
+titanic_df = pd.read_csv('Titanic-Dataset(1).csv')
+
+# Explore the dataset
+print(titanic_df.head())
+
+# Preprocess the data
+# Handle missing values, encode categorical variables, etc.
+
+# Split the dataset into features (X) and target variable (y)
+X = titanic_df.drop(columns=['Survived'])
+y = titanic_df['Survived']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize the Logistic Regression model
+model = LogisticRegression(random_state=42)
+
+# Train the model
+model.fit(X_train, y_train)
+
+# Make predictions on the testing data
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+print(classification_report(y_test, y_pred))
