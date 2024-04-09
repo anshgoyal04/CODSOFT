@@ -1,0 +1,33 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import classification_report
+
+# Load the CSV file into a DataFrame
+iris_df = pd.read_csv('IRIS(1).csv')
+
+# Display the first few rows of the DataFrame to inspect the data
+print(iris_df.head())
+
+# Check for any missing values in the dataset
+print("Missing values:")
+print(iris_df.isnull().sum())
+
+# Split the dataset into features (X) and target variable (y)
+X = iris_df.drop(columns=['species'])
+y = iris_df['species']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize the Decision Tree classifier
+model = DecisionTreeClassifier(random_state=42)
+
+# Train the model
+model.fit(X_train, y_train)
+
+# Make predictions on the testing data
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+print(classification_report(y_test, y_pred))
