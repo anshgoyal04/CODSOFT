@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="home-screen">
+            <h1 id="current-time">12:00</h1>
+            <p id="current-date">January 1, 2024</p>
+            <button id="set-alarm-btn">Set Alarm</button>
+        </div>
+
+        <div id="alarm-setting" style="display: none;">
+            <h2>Set Alarm</h2>
+            <input type="time" id="alarm-time">
+            <input type="file" accept="audio/*" id="alarm-tone">
+            <button id="save-alarm-btn">Save Alarm</button>
+        </div>
+
+        <div id="alarm-management" style="display: none;">
+            <h2>Alarms</h2>
+            <ul id="alarm-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
