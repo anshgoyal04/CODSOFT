@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu-section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.menu-item {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+span {
+    color: #007bff;
+    font-weight: bold;
+}
