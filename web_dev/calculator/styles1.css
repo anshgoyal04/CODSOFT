@@ -1,0 +1,58 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Features Section Styles */
+#features {
+    padding: 50px 0;
+}
+
+.feature {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.feature img {
+    max-width: 100%;
+}
+
+/* About Section Styles */
+#about {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
